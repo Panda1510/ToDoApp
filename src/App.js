@@ -104,8 +104,8 @@ const Container = styled.div`
   background-color: white;
   height: 90%;
   width: 50%;
-  margin: 30px auto;
   padding-bottom: 20px;
+  margin: 0 auto;
   @media (max-width: 768px) {
     width: 80%;
   }
@@ -113,7 +113,7 @@ const Container = styled.div`
   h2 {
     color: rgba(0, 0, 0, 0.5);
     padding-top: 15px;
-    margin-top: 20%;
+    margin-top: 8%;
   }
 `;
 
