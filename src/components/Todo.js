@@ -83,10 +83,12 @@ function Todo(props) {
                 />
               </FormControl>
             </TakeDeadLine>
-            <Button onClick={updateTodo}>Update</Button>
+            <Button onClick={updateTodo} className = 'modal-input update-button'>Update</Button>
           </div>
         </ModalContainer>
       </Modal>
+
+      {/* code for outputting already entered tasks */}
       <List className="todo__list">
         <ListItem className="todo__list-item">
           <ListItemAvatar>

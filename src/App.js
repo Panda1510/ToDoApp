@@ -54,7 +54,7 @@ function App() {
   return (
     <Container>
       <div className="App">
-        <h2>Manage you tasks here</h2>
+        <h2 className = "main-heading">Manage you tasks here</h2>
         <FormStyle>
           <TakeTask>
             <FormControl>
@@ -62,6 +62,7 @@ function App() {
               <Input
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
+                 className = 'form-input'
               />
             </FormControl>
           </TakeTask>
@@ -71,6 +72,7 @@ function App() {
               <Input
                 value={deadLine}
                 onChange={(event) => setDeadLine(event.target.value)}
+                className = 'form-input'
               />
             </FormControl>
           </TakeDeadLine>
@@ -103,6 +105,7 @@ const Container = styled.div`
   height: 90%;
   width: 50%;
   margin: 30px auto;
+  padding-bottom: 20px;
   @media (max-width: 768px) {
     width: 80%;
   }

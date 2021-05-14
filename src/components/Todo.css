@@ -19,6 +19,7 @@
 .modal {
     border: none;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .modal-content {
@@ -26,10 +27,10 @@
     width: 450px;
     border: none;
     border-radius: 10px;
+    padding-bottom: 10px;
     @media (max-width: 768px) {
         width: 90%;
     }
-    
 }
 
 .modal-heading {
@@ -42,17 +43,25 @@
 .modal-input {
     /* border: 1px solid black; */
     width: 300px;
+    margin-bottom: 10px;
     @media (max-width: 768px) {
         width: 90%;
     }
 }
 
+
 .button-edit:hover {
-    background-color: rgba(250, 190, 88, 1);
-    color: rgba(255, 255, 255, 0.897);
+    color: rgba(250, 190, 88, 1);
 }
 
 .button-delete:hover {
-    background-color: rgb(228, 96, 96);
-    color: rgba(255, 255, 255, 0.897);
+    color: rgb(228, 96, 96)
+}
+
+.update-button {
+    margin-top: 100px;
+}
+    
+.update-button:hover {
+    color: rgb(153, 153, 238);
 }
