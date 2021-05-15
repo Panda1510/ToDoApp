@@ -1,0 +1,16 @@
+.list-item {
+    display: block;
+}
+
+h1 {
+    font-size: 1vw;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 0.9vw;
+    margin-top: 0;
+    padding-top: 0;
+    color: rgba(0, 0, 0, 0.4)
+}

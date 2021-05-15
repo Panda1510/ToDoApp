@@ -12,12 +12,20 @@ import {
   InputLabel,
   Input,
   FormControl,
+  createMuiTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+  Typography,
 } from "@material-ui/core";
 import "./Todo.css";
 import db from "../firebase";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
+import MyListItemText from "./MyListItemText";
+
+let theme = createMuiTheme();
+theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -83,7 +91,9 @@ function Todo(props) {
                 />
               </FormControl>
             </TakeDeadLine>
-            <Button onClick={updateTodo} className = 'modal-input update-button'>Update</Button>
+            <Button onClick={updateTodo} className="modal-input update-button">
+              Update
+            </Button>
           </div>
         </ModalContainer>
       </Modal>
@@ -97,14 +107,17 @@ function Todo(props) {
           <ListItemText
             primary={props.todo.todo}
             secondary={props.todo.deadLine}
+            className = 'list-text'
           />
 
-          <Button onClick={(e) => setOpen(true)} className = 'button-edit'>Edit</Button>
+          <Button onClick={(e) => setOpen(true)} className="button-edit">
+            Edit
+          </Button>
           <Button
             onClick={(event) =>
               db.collection("todos").doc(props.todo.id).delete()
             }
-            className = 'button-delete'
+            className="button-delete"
           >
             <DeleteForeverIcon />
           </Button>
